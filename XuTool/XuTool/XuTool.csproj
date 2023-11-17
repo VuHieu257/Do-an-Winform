@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B729874C-F32A-4AC7-A324-4CC5B638145E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>XuTool</RootNamespace>
+    <AssemblyName>XuTool</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Axe.Windows.Automation, Version=2.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="KAutoHelper">
+      <HintPath>..\..\library\ADBHowkteamLibrary\KAutoHelper V2\KAutoHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.PerformanceTools.Automation, Version=17.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADBHelper.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerDAO.cs" />
+    <Compile Include="frmFindCapture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFindCapture.Designer.cs">
+      <DependentUpon>frmFindCapture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCapture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCapture.Designer.cs">
+      <DependentUpon>frmCapture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDemo1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDemo1.Designer.cs">
+      <DependentUpon>frmDemo1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDocument.Designer.cs">
+      <DependentUpon>frmDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManipulation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManipulation.Designer.cs">
+      <DependentUpon>frmManipulation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateAcc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateAcc.Designer.cs">
+      <DependentUpon>frmCreateAcc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmdemo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmdemo.Designer.cs">
+      <DependentUpon>frmdemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfile.Designer.cs">
+      <DependentUpon>frmProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KetNoi.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmFindCapture.resx">
+      <DependentUpon>frmFindCapture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCapture.resx">
+      <DependentUpon>frmCapture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDemo1.resx">
+      <DependentUpon>frmDemo1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocument.resx">
+      <DependentUpon>frmDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManipulation.resx">
+      <DependentUpon>frmManipulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateAcc.resx">
+      <DependentUpon>frmCreateAcc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmdemo.resx">
+      <DependentUpon>frmdemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfile.resx">
+      <DependentUpon>frmProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\.editorconfig" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sticker-png-mouse-click-computer-mouse-pointer-cursor-hand-computer-software-point-and-click-line-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\android.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste_icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Captures.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Colebemis-Feather-Save.512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Microsoft-Fluentui-Emoji-Mono-Open-File-Folder.512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconsmind-Outline-Files.512.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
